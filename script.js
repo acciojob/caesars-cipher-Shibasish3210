@@ -32,13 +32,13 @@ const lookup = {
 };
 
 function rot13(encodedStr) {
-  let decodedArr = []; // Your Result goes here
+  let decodedArr = ""; // Your Result goes here
   // Only change code below this line
 	for (let index = 0; index < encodedStr.length; index++) {
 		if(encodedStr[index] >= 'A' && encodedStr[index] <= 'Z'){
-			decodedArr.push(lookup[encodedStr[index]]);
+			decodedArr += lookup[encodedStr[index]];
 		}else{
-			decodedArr.push(encodedStr[index]);
+			decodedArr += encodedStr[index];
 		}
 	}
 
